@@ -4,9 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--fontawesome-->
+    <link href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" rel="stylesheet">
     <title>Bank</title>
 </head>
 <body>
-    <p>Hello World</p>
+    <!--initial page-->
+    <div class="vh-100 bg-dark d-flex flex-column justify-content-center align-items-center">
+        <div class="d-flex align-items-center col-10">
+            <div id="initial-form" class="bg-white col-12 text-center p-4">
+                <h2 class="pb-3">Please type your information below</h2>
+                <!--input form-->
+                <form class="form">
+                    <div class="form-group">
+                        <input type="email" name="userEmail" placeholder="Email" required class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="userFirstName" placeholder="First name" required class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="userLastName" placeholder="Last name" required class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="userFirstDeposit" aria-describedby="emailHelp" placeholder="Enter your first deposit" required class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input type="radio" name="userAccountType" id="userAccountType1" value="savings" checked required class="form-check-input">
+                            <label for="userAccountType1" class="form-check-label">Saving</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="userAccountType" id="userAccountType2" value="checkings" required class="form-check-input">
+                            <label for="userAccountType2" class="form-check-label">Checkings</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary col-12">Submit</button>
+                </form>
+            </div>
+            <!--second page-->
+            <div id="bankPage" class="bg-green col-12 text-center text-white"></div>
+        </div>
+    </div>
 </body>
 </html>
